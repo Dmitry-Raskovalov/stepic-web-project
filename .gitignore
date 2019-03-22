@@ -1,0 +1,3 @@
+ask/*.sublime*
+__pycache__/
+*.py[cod]

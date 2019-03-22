@@ -1,4 +1,11 @@
+  sudo apt remove python-django -y
+  sudo apt remove gunicorn -y
+  sudo apt update
+  sudo apt install python3-pip
+  pip3 install Django==2.0.0
+  pip3 install gunicorn
   sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
   sudo rm -rf /etc/nginx/sites-enabled/default
   sudo /etc/init.d/nginx restart
   gunicorn -b 0.0.0.0:8080 hello
+  sudo gunicorn -c /home/box/web/etc/gunicorn-django.conf ask.wsgi:application

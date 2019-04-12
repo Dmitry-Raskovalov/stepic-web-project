@@ -1,7 +1,7 @@
 import os
 import unittest
 import sys
-sys.path.append('/home/box/web/ask')
+sys.path.append('/home/d/my_code/web/ask')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'ask.settings'
 from django.db.models.fields import FieldDoesNotExist
 from django.db.models.fields import CharField, TextField, IntegerField, DateField

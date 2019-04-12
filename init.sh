@@ -1,3 +1,4 @@
+  git clone https://github.com/Dmitry-Raskovalov/stepic-web-project.git
   sudo apt remove python-django -y
   sudo apt remove gunicorn -y
   sudo apt update

@@ -16,16 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from qa.views import test, not_found 
+from qa import views
 urlpatterns = [
-    path('', test),
+    path('', views.new_questions_list, name='qa_new'),
     path('admin/', admin.site.urls),
-    path('login/', test),
-    path('signup/', test),
-    path('ask/', test),
-    path('popular/', test),
-    path('new/', test),
-    path('question/<int:id>/', test),
-    path('ask//popular/', test),
-    re_path(r'^', not_found),
+    path('login/', views.test),
+    path('signup/', views.test),
+    path('ask/', views.test),
+    path('popular/', views.popular_questions_list, name='qa_popular'),
+    path('new/', views.test),
+    path('question/<str:slug>/', views.question, name='qa_question'),
+    path('ask//popular/', views.test),
+    re_path(r'^', views.not_found),
 ]
